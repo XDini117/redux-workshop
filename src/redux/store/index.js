@@ -1,4 +1,5 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 function reducers() {
     return {
@@ -8,6 +9,6 @@ function reducers() {
 
 export default () => {
     return {
-        ...createStore(reducers),
+        ...createStore(reducers, applyMiddleware(thunk)),
     };
 };
