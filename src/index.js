@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+import configureStore from './redux/store/configureStore';
+
+import UsersPage from './pages/UsersPage';
+
+const store = configureStore();
 
 ReactDOM.render(
-    <div>
-        <p>Redux - Workshop</p>
-    </div>,
+    <Provider store={store}>
+        <UsersPage />
+    </Provider>,
     document.getElementById('root')
 );
