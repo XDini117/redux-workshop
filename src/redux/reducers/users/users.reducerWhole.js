@@ -1,5 +1,10 @@
 import { actionTypes } from '../../index.actionTypes';
-import inititialStates from './users.initialStates';
+
+const inititialStates = {
+    isLoading: false,
+    users: null,
+    errorMessage: null,
+};
 
 const usersReducer = (state = inititialStates, { type, payload }) => {
     switch (type) {

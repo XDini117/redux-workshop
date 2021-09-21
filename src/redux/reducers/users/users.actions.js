@@ -1,4 +1,4 @@
-import actionTypes from './users.actionTypes';
+import { actionTypes } from '../../index.actionTypes';
 
 const usersLoadStart = () => ({
     type: actionTypes.USERS_LOAD_START,
