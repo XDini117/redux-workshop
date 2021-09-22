@@ -1,21 +1,15 @@
 import {
+    DefaultStateI,
+    defaultState,
     PokemonDispatchTypes,
-    PokemonType,
     POKEMON_LOADING,
     POKEMON_FAIL,
     POKEMON_SUCCESS,
 } from '../actions/PokemonActionType';
 
-interface DefaultStateI {
-    loading: boolean;
-    pokemon?: PokemonType;
-}
+const initialState = defaultState;
 
-const defaultState: DefaultStateI = {
-    loading: false,
-};
-
-const pokemonReducer = (state: DefaultStateI = defaultState, action: PokemonDispatchTypes): DefaultStateI => {
+const pokemonReducer = (state: DefaultStateI = initialState, action: PokemonDispatchTypes): DefaultStateI => {
     switch (action.type) {
         case POKEMON_FAIL:
             return {
