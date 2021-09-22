@@ -6,4 +6,6 @@ import RootReducer from './reducers/RootReducer';
 
 const Store = createStore(RootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
+export type RootStoreType = ReturnType<typeof RootReducer>;
+
 export default Store;
