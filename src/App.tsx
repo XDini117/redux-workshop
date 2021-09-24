@@ -1,20 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import { actionCreators, State } from './state';
+import { State, depositMoney, withdrawMoney, bankrupt } from './state';
 
 function App() {
     const dispatch = useDispatch();
 
-    const { depositMoney, withdrawMoney, bankrupt } = bindActionCreators(actionCreators, dispatch);
     const amount = useSelector((state: State) => state.bank);
 
     return (
         <div>
             <h1>{amount}</h1>
-            <button onClick={() => depositMoney(1000)}>Deposit</button>
-            <button onClick={() => withdrawMoney(500)}>Withdraw</button>
-            <button onClick={() => bankrupt()}>Bankrupt</button>
+            <button onClick={() => dispatch(depositMoney(1000))}>Deposit</button>
+            <button onClick={() => dispatch(withdrawMoney(500))}>Withdraw</button>
+            <button onClick={() => dispatch(bankrupt())}>Bankrupt</button>
         </div>
     );
 }
