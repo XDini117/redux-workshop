@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 
 import bankReducer from './bankReducer';
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
     bank: bankReducer,
 });
 
-export default reducers;
+export default rootReducer;
 
-export type State = ReturnType<typeof reducers>;
+export type State = ReturnType<typeof rootReducer>;
