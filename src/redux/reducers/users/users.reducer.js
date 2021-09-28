@@ -1,7 +1,9 @@
-import actionTypes from './users.actionTypes';
-import inititialStates from './users.initialStates';
+import { actionTypes } from './users.actionTypes';
+import { defaultState } from './users.initialStates';
 
-const usersReducer = (state = inititialStates, { type, payload }) => {
+const initialStates = defaultState;
+
+const usersReducer = (state = initialStates, { type, payload }) => {
     switch (type) {
         case actionTypes.USERS_LOAD_START:
             return { ...state, isLoading: true, users: null, errorMessage: null };
