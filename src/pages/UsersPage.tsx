@@ -6,7 +6,7 @@ import { loadUsersAsync } from '../redux/reducers/users/users.thunks';
 
 function UsersPage() {
     const dispatch = useDispatch();
-    const { isLoading, users, errorMessage } = useSelector((state: StoreI) => state.usersData);
+    const { isLoading, users, errorMessage } = useSelector(({ usersData }: StoreI) => usersData);
 
     useEffect(() => {
         dispatch(loadUsersAsync());
