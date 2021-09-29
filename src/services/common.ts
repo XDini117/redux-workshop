@@ -1,6 +1,6 @@
 import apiClient from './api';
 
-type UsersData = {
+type UsersDataI = {
     data: [
         {
             id: number;
@@ -10,4 +10,4 @@ type UsersData = {
     ];
 };
 
-export const getAllUsers = () => apiClient.get('users').then(({ data }): UsersData => data);
+export const getAllUsers = () => apiClient.get('users').then(({ data }): UsersDataI => data);

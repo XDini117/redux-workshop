@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import store from './redux/store';
+import STORE from './redux/store';
 
 import UsersPage from './sections/users';
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={STORE}>
         <UsersPage />
     </Provider>,
     document.getElementById('root')
