@@ -1,5 +1,13 @@
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App from './App';
+import store from './redux/store/configureStore';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import UsersPage from './pages/UsersPage';
+
+ReactDOM.render(
+    <Provider store={store}>
+        <UsersPage />
+    </Provider>,
+    document.getElementById('root')
+);
