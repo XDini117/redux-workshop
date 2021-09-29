@@ -1,3 +1,5 @@
+// Users
+
 export enum actionTypes {
     USERS_LOAD_START = 'USERS_LOAD_START',
     USERS_LOAD_SUCCESS = 'USERS_LOAD_SUCCESS',

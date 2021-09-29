@@ -1,6 +1,6 @@
-import { actionTypes } from './users.actionTypes';
-import { defaultState } from './users.initialStates';
-import { Action } from './users.actions';
+import { defaultState } from '../schema';
+import { Action } from '../state/actions';
+import { actionTypes } from '../state/action-types';
 
 const initialStates = defaultState;
 

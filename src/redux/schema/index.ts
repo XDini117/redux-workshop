@@ -4,18 +4,18 @@ interface UserI {
     username: string;
 }
 
-export interface DefaultStateI {
+export interface UsersDataI {
     isLoading: boolean;
     users: Array<UserI>;
     errorMessage: any;
 }
 
-export const defaultState: DefaultStateI = Object.freeze({
+export const defaultState: UsersDataI = Object.freeze({
     isLoading: false,
     users: [],
     errorMessage: null,
 });
 
 export interface StoreI {
-    usersData: DefaultStateI;
+    usersData: UsersDataI;
 }

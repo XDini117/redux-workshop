@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { StoreI } from '../redux/reducers/users/users.initialStates';
+import { StoreI } from '../../redux/schema';
 
-import { loadUsersAsync } from '../redux/reducers/users/users.thunks';
+import { loadUsersAsync } from '../../redux/state/action-creators';
 
 function UsersPage() {
     const dispatch = useDispatch();
