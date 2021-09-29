@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { DefaultStateI } from '../redux/reducers/users/users.initialStates';
+import { StoreI } from '../redux/reducers/users/users.initialStates';
 
 import { loadUsersAsync } from '../redux/reducers/users/users.thunks';
 
 function UsersPage() {
     const dispatch = useDispatch();
-    const { isLoading, users, errorMessage } = useSelector((state: DefaultStateI) => state.users);
+    const { isLoading, users, errorMessage } = useSelector((state: StoreI) => state.usersData);
 
     useEffect(() => {
         dispatch(loadUsersAsync());

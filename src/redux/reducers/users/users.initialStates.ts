@@ -9,3 +9,7 @@ export const defaultState: DefaultStateI = {
     users: [],
     errorMessage: null,
 };
+
+export interface StoreI {
+    usersData: DefaultStateI;
+}
