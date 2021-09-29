@@ -6,6 +6,6 @@ export interface DefaultStateI {
 
 export const defaultState: DefaultStateI = {
     isLoading: false,
-    users: null,
+    users: [],
     errorMessage: null,
 };
