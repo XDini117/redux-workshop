@@ -1,4 +1,4 @@
-import apiClient from '../helper/apiClient';
+import apiClient from './api';
 
 type UsersData = {
     data: [
